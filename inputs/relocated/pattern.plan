@@ -1,0 +1,6 @@
+# 雨季池设定，历史边界意见保留
+prototype pool(cap=24) {
+  port feed in water;
+  port release out water;
+  retention = cap;
+}

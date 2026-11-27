@@ -1,0 +1,46 @@
+{
+  "base": "survey/site.plan",
+  "current": [
+    "relocated/site.plan",
+    "competing/site.plan"
+  ],
+  "edits": [
+    {
+      "op": "delete",
+      "target": [
+        "wet_path",
+        "base"
+      ],
+      "scope": "instance"
+    },
+    {
+      "op": "connect",
+      "target": [
+        "new_path",
+        "base"
+      ],
+      "from": "inlet.release",
+      "to": "pond_b.feed",
+      "scope": "instance"
+    },
+    {
+      "op": "rename",
+      "target": [
+        "pond_b",
+        "base"
+      ],
+      "value": "东回流池",
+      "scope": "instance"
+    }
+  ],
+  "public_edit": {
+    "op": "set",
+    "target": [
+      "pool",
+      "base"
+    ],
+    "property": "cap",
+    "value": 32,
+    "scope": "public"
+  }
+}

@@ -1,0 +1,11 @@
+import "pattern.plan"
+parcel inlet "北缘" { port release out water; }
+use pond_a "旧池" = pool(24);
+use pond_b "旧池" = pool(30);
+use pond_c "蓄水区" = pool();
+connect wet_path: inlet.release -> pond_a.feed;
+scenario upgraded {
+  override pond_a.retention = 40;
+  off wet_path;
+  connect fallback: inlet.release -> pond_b.feed;
+}
